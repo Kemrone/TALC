@@ -12,7 +12,7 @@ import view.*;
 */
 
 
-public class Context {
+public class Fichier {
 	private Build strategyB;
 	private Sort strategyS;
 	
