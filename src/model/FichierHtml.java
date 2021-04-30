@@ -48,9 +48,9 @@ public class FichierHtml extends Fichier {
 	                "</table>\n" +
 	                "</div>\n" +
 	                "\n" +
-	                "<h2> Durﾃｩes de connexion</h2>\n" +
+	                "<h2> Durées de connexion</h2>\n" +
 	                "\n" +
-	                "<p> Pour chaque personne ci-dessous, on retrouve son temps total de connexion sur la plage déclarée du cours, ainsi qu'un graphe qui indique les périodes de connexion (en vert) et d'absence de connexion (en blanc). En pointant la souris sur une zone, une bulle affiche les instants de dﾃｩbut et de fin de pﾃｩriode. \n" +
+	                "<p> Pour chaque personne ci-dessous, on retrouve son temps total de connexion sur la plage déclarée du cours, ainsi qu'un graphe qui indique les périodes de connexion (en vert) et d'absence de connexion (en blanc). En pointant la souris sur une zone, une bulle affiche les instants de début et de fin de période. \n" +
 	                "</p>";
 	        html += "<div id=\"blockpeople\"> ";
 
@@ -96,7 +96,7 @@ public class FichierHtml extends Fichier {
 	                html += "<img src=\"off.png\" ";
 	                html += "width=\"" + (100.*delayMinutes/durationMaxMinutes) + "%\" ";
 	                html += "height=\"20\" title=\"absent(e) de " + refTime.toString();
-	                html += " ﾃ� " + begin.toString() + " \"> \n";
+	                html += " à " + begin.toString() + " \"> \n";
 	            }
 	            // green bar for the current period
 	            html += "<img src=\"on.png\" ";
