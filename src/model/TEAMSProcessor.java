@@ -41,9 +41,38 @@ public class TEAMSProcessor {
         }
     }
 
-    public Collection<People> get_allpeople() {
+   public Collection<People> get_allpeople() {
         return _allpeople;
     }
+
+	public String get_fileName() {
+		return _fileName;
+	}
+
+	public void set_fileName(String _fileName) {
+		this._fileName = _fileName;
+	}
+
+	public String get_startTime() {
+		return _startTime;
+	}
+
+	public void set_startTime(String _startTime) {
+		this._startTime = _startTime;
+	}
+
+	public String get_endTime() {
+		return _endTime;
+	}
+
+	public void set_endTime(String _endTime) {
+		this._endTime = _endTime;
+	}
+
+	public void set_allpeople(Collection<People> _allpeople) {
+		this._allpeople = _allpeople;
+	}
+    
 
     
     
