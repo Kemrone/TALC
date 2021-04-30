@@ -1,18 +1,7 @@
 package model;
 
 public interface Sort {
-	
-	
-	
-	
-	/*
-	//******************************************\\
-	//*********** A implementer *****************\\
-	\\******************************************\\
-	\\*****************************************\\
-	*/
-	public void sortFile(PeopleListL pl){
-		
-	}
+
+	public void sortFile(PeopleListL pl);
 
 }
