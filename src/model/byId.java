@@ -1,17 +1,16 @@
 package model;
 
+import java.util.Comparator;
+
 public class byId implements Sort{
-	
-	
-	
-	/*
-	//******************************************\\
-	//*********** A implementer *****************\\
-	\\******************************************\\
-	\\*****************************************\\
-	*/
-	public void sortFile(PeopleListL pl){
-		
+
+	public byId(PeopleListL pl) {
+		sortFile(pl);
+		System.out.println("Sort by Id done");
+
 	}
 
+	public void sortFile(PeopleListL pl){
+		pl.get_peopleList().sort(Comparator.comparing(People::get_id));
+	}
 }
