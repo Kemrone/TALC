@@ -10,6 +10,7 @@ import javafx.scene.input.TransferMode;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import model.Fichier;
+import model.FichierFactory;
 import model.FichierHtml;
 import model.TEAMSProcessor;
 
@@ -70,7 +71,7 @@ public class MainController implements Initializable{
     	if (db.hasFiles()) {
     	//fichierId.setText(db.getFiles().toString());		   		 
     	File selectedFile = files.get(0);
-    	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+    	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     	fichierId.setText(selectedFile.getName());
     	dateId.setText(sdf.format(selectedFile.lastModified()));
     	}
@@ -79,10 +80,10 @@ public class MainController implements Initializable{
     	public void valider(ActionEvent event) {
     		File selectedFile = files.get(0);
     		
-    		var t = new TEAMSProcessor(selectedFile,"19/01/2021 Ã? 10:15:00", "19/01/2021 Ã? 11:45:00");
-    		Fichier fich = new Fichier();
-    		fich.setT(new FichierHtml());
-    		System.out.println(fich.generateFile(t));
+    		var t = new TEAMSProcessor(selectedFile,"19/01/2021 Ã  10:15:00", "19/01/2021 Ã  11:45:00");
+    		FichierFactory fichFac = new FichierFactory();
+    		Fichier fich = fichFac.getFichier("HTML", t);
+    		System.out.println(fich.getContent());
     	}
     	
     	
