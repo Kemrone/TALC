@@ -20,8 +20,34 @@ public class People implements Comparable<People> {
         this._periodList = new LinkedList<>();
     }
 
-    
-    
+    public String get_name() {
+        return _name;
+    }
+
+    public String get_start() {
+        return _start;
+    }
+
+    public void set_start(String _start) {
+        this._start = _start;
+    }
+
+    public String get_stop() {
+        return _stop;
+    }
+
+    public void set_stop(String _stop) {
+        this._stop = _stop;
+    }
+
+    public LinkedList<TEAMSPeriod> get_periodList() {
+        return _periodList;
+    }
+
+    public void set_periodList(LinkedList<TEAMSPeriod> _periodList) {
+        this._periodList = _periodList;
+    }
+
     public String get_id() {
         return _id;
     }
@@ -114,10 +140,9 @@ public class People implements Comparable<People> {
         return this._name;
     }
 
-    
-    
    
-   
+     
+    
     
     @Override
     public String toString() {
@@ -149,49 +174,5 @@ public class People implements Comparable<People> {
     public boolean isOutOfPeriod() {
         return this._periodList.isEmpty();
     }
-
-
-
-	public String get_start() {
-		return _start;
-	}
-
-
-
-	public void set_start(String _start) {
-		this._start = _start;
-	}
-
-
-
-	public String get_stop() {
-		return _stop;
-	}
-
-
-
-	public void set_stop(String _stop) {
-		this._stop = _stop;
-	}
-
-
-
-	public LinkedList<TEAMSPeriod> get_periodList() {
-		return _periodList;
-	}
-
-
-
-	public void set_periodList(LinkedList<TEAMSPeriod> _periodList) {
-		this._periodList = _periodList;
-	}
-
-
-
-	public String get_name() {
-		return _name;
-	}
-    
-    
 
 }
