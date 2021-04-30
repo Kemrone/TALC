@@ -7,11 +7,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
       <Label fx:id="idTitre" prefHeight="42.0" prefWidth="420.0" style="-fx-background-color: grey;" text=" TEAMS Attendees List Converter">
          <font>
@@ -48,7 +48,7 @@
       <CheckBox fx:id="genereSansIdId" layoutX="276.0" layoutY="612.0" mnemonicParsing="false" text="sans id" />
       <CheckBox fx:id="genereSansPlanningId" layoutX="276.0" layoutY="641.0" mnemonicParsing="false" text="sans planning" />
       <Line endX="221.0" layoutX="179.0" layoutY="689.0" startX="-157.0" />
-      <Button fx:id="apllyButtonId" layoutX="118.0" layoutY="717.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Générer la sortie" />
+      <Button fx:id="apllyButtonId" layoutX="118.0" layoutY="717.0" mnemonicParsing="false" onAction="#valider" prefHeight="25.0" prefWidth="167.0" text="Générer la sortie" />
       <Label layoutY="777.0" prefHeight="25.0" prefWidth="420.0" style="-fx-background-color: grey;">
          <font>
             <Font size="18.0" />
@@ -57,5 +57,6 @@
       <TextField fx:id="libelleId" layoutX="96.0" layoutY="411.0" prefHeight="25.0" prefWidth="273.0" />
       <TextField fx:id="hDebutId" layoutX="155.0" layoutY="440.0" prefHeight="25.0" prefWidth="214.0" />
       <TextField fx:id="hFinId" layoutX="155.0" layoutY="469.0" prefHeight="25.0" prefWidth="214.0" />
+      <VBox fx:id="dragTarget" layoutX="14.0" layoutY="72.0" onDragDropped="#handleDragFile" onDragOver="#handleFile" prefHeight="167.0" prefWidth="395.0" />
    </children>
 </AnchorPane>
