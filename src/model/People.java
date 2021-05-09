@@ -12,42 +12,18 @@ public class People implements Comparable<People> {
     private final String _id;
     private String _start;
     private String _stop;
-    private LinkedList<TEAMSPeriod> _periodList;
+    private TEAMSPeriodList _periodList;
+  
+   
 
     public People(String _name) {
         this._name = _name;
         this._id = StudentIDServer.getId(this._name);
-        this._periodList = new LinkedList<>();
+        this._periodList = new TEAMSPeriodList();
     }
 
-    public String get_name() {
-        return _name;
-    }
-
-    public String get_start() {
-        return _start;
-    }
-
-    public void set_start(String _start) {
-        this._start = _start;
-    }
-
-    public String get_stop() {
-        return _stop;
-    }
-
-    public void set_stop(String _stop) {
-        this._stop = _stop;
-    }
-
-    public LinkedList<TEAMSPeriod> get_periodList() {
-        return _periodList;
-    }
-
-    public void set_periodList(LinkedList<TEAMSPeriod> _periodList) {
-        this._periodList = _periodList;
-    }
-
+    
+    
     public String get_id() {
         return _id;
     }
@@ -55,20 +31,7 @@ public class People implements Comparable<People> {
     
     
     
-    
-    public void addPeriod(String action, String instant) {
-
-        if ( action.charAt(0) == 'R' ) {
-            TEAMSPeriod period = new TEAMSPeriod(instant);
-            this._periodList.add(period);
-        } else
-            if ( action.charAt(0) == 'A' ) {
-                this._periodList.getLast().stopAt(instant);
-            } else {
-                System.out.println(this._name + " --> erreur : action inconnue ["+action+"] ");
-            }
-    }
-
+ 
     public void forceEndTimeAt(String instant) {
         this._stop = instant;
         // delete all periods started after ending time
@@ -140,10 +103,7 @@ public class People implements Comparable<People> {
         return this._name;
     }
 
-   
-     
-    
-    
+
     @Override
     public String toString() {
         return "People{" +
@@ -154,8 +114,7 @@ public class People implements Comparable<People> {
                 ", _stop='" + _stop + '\'' +
                 '}';
     }
-
-    
+ 
     
     public String getDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");
@@ -174,5 +133,44 @@ public class People implements Comparable<People> {
     public boolean isOutOfPeriod() {
         return this._periodList.isEmpty();
     }
+
+
+
+	public String get_start() {
+		return _start;
+	}
+
+
+
+	public void set_start(String _start) {
+		this._start = _start;
+	}
+
+
+
+	public String get_stop() {
+		return _stop;
+	}
+
+
+
+	public void set_stop(String _stop) {
+		this._stop = _stop;
+	}
+
+
+
+	public String get_name() {
+		return _name;
+	}
+
+
+
+	public TEAMSPeriodList get_periodList() {
+		
+		return this._periodList;
+	}
+    
+    
 
 }

@@ -26,7 +26,7 @@ public class FichierHtml extends Fichier {
 	                "\t\t<td> " + /*this._allpeople.iterator().next().getDate() +*/ " </td>\n" +
 	                "\t</tr>\n" +
 	                "\t<tr>\n" +
-	                "\t\t<th> Heure dﾃｩbut : </th>\n" +
+	                "\t\t<th> Heure d�but : </th>\n" +
 	                "\t\t<td> " + this.t.get_startTime() + " </td>\n" +
 	                "\t</tr>\n" +
 	                "\t<tr>\n" +
@@ -35,22 +35,22 @@ public class FichierHtml extends Fichier {
 	                "\t</tr>\n" +
 	                "\t<tr>\n" +
 	                "\t\t<th> Cours : </th>\n" +
-	                "\t\t<td> CM Bases de donnﾃｩes et programmation Web </td>\n" +
+	                "\t\t<td> CM Bases de donn�es et programmation Web </td>\n" +
 	                "\t</tr>\n" +
 	                "\t<tr>\n" +
-	                "\t\t<th> Fichier analysﾃｩ : </th>\n" +
+	                "\t\t<th> Fichier analyse : </th>\n" +
 	                "\t\t<td> " + this.t.get_fileName() + " </td>\n" +
 	                "\t</tr>\n" +
 	                "\t<tr>\n" +
-	                "\t\t<th> Nombre de connectﾃｩs : </th>\n" +
+	                "\t\t<th> Nombre de connect�s : </th>\n" +
 	                "\t\t<td> " + this.t.get_allpeople() + "  </td>\n" +
 	                "\t</tr>\n" +
 	                "</table>\n" +
 	                "</div>\n" +
 	                "\n" +
-	                "<h2> Durﾃｩes de connexion</h2>\n" +
+	                "<h2> Dur�es de connexion</h2>\n" +
 	                "\n" +
-	                "<p> Pour chaque personne ci-dessous, on retrouve son temps total de connexion sur la plage dﾃｩclarﾃｩe du cours, ainsi qu'un graphe qui indique les pﾃｩriodes de connexion (en vert) et d'absence de connexion (en blanc). En pointant la souris sur une zone, une bulle affiche les instants de dﾃｩbut et de fin de pﾃｩriode. \n" +
+	                "<p> Pour chaque personne ci-dessous, on retrouve son temps total de connexion sur la plage declar�e du cours, ainsi qu'un graphe qui indique les p�riodes de connexion (en vert) et d'absence de connexion (en blanc). En pointant la souris sur une zone, une bulle affiche les instants de d�but et de fin de p�riode. \n" +
 	                "</p>";
 	        html += "<div id=\"blockpeople\"> ";
 
@@ -96,13 +96,13 @@ public class FichierHtml extends Fichier {
 	                html += "<img src=\"off.png\" ";
 	                html += "width=\"" + (100.*delayMinutes/durationMaxMinutes) + "%\" ";
 	                html += "height=\"20\" title=\"absent(e) de " + refTime.toString();
-	                html += " ﾃ� " + begin.toString() + " \"> \n";
+	                html += " � " + begin.toString() + " \"> \n";
 	            }
 	            // green bar for the current period
 	            html += "<img src=\"on.png\" ";
 	            html += "width=\"" + (100.*duration/durationMaxMinutes) + "%\" ";
-	            html += "height=\"20\" title=\"connectﾃｩ(e) de " + begin.toString();
-	            html += " ﾃ� " + end.toString()+ "\"> \n";
+	            html += "height=\"20\" title=\"connect�(e) de " + begin.toString();
+	            html += " � " + end.toString()+ "\"> \n";
 	            refTime = end;
 	        }
 	        // last period aligned on end time ?
@@ -113,7 +113,7 @@ public class FichierHtml extends Fichier {
 	            html += "<img src=\"off.png\" ";
 	            html += "width=\"" + (100.*delayMinutes/durationMaxMinutes) + "%\" ";
 	            html += "height=\"20\" title=\"absent(e) de " + refTime.toString();
-	            html += " ﾃ� " + endTime.toString() + " \"> \n";
+	            html += " � " + endTime.toString() + " \"> \n";
 	        }
 			html += "</div> \n"; // end of div timebar
 	        html +=	"<div class=\"duration\"> " + (long)Math.round(totalDuration) + " </div> \n";

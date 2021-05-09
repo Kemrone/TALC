@@ -4,6 +4,8 @@ import javafx.util.converter.LocalDateTimeStringConverter;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Locale;
 
 public class TEAMSPeriod {
 
@@ -13,8 +15,8 @@ public class TEAMSPeriod {
 
     // TODO Simplify with static class
     public TEAMSPeriod(String _start) {
-        String pattern = "dd/MM/yyyy Ã  HH:mm:ss";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
+        String pattern = "dd/MM/yyyy à HH:mm:ss";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern); 
         this._converter = new LocalDateTimeStringConverter(formatter, formatter);
         this.startAt(_start);
     }
