@@ -19,7 +19,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.nio.file.Files;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.HashMap;
