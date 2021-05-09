@@ -30,11 +30,11 @@ public class TEAMSAttendanceListAnalyzer {
 
                     if (this._peopleList.containsKey(identite)) {
                         People person = this._peopleList.get(identite);
-                        person.get_periodList().addPeriod(action, instant,person);
+                        person.get_periodList().addPeriod(action, instant,person.get_name());
                         this._peopleList.replace(identite,person);
                     } else {
                         People person = new People(identite);
-                        person.get_periodList().addPeriod(action, instant, person);
+                        person.get_periodList().addPeriod(action, instant, person.get_name());
                         this._peopleList.put(identite, person);
                     }
                 }

@@ -23,7 +23,7 @@ public class TEAMSPeriodList implements Iterable<TEAMSPeriod> {
 	}
 
 	
-	 public void addPeriod(String action, String instant, People p) {
+	 public void addPeriod(String action, String instant, String nom) {
 
 	        if ( action.charAt(0) == 'R' ) {
 	            TEAMSPeriod period = new TEAMSPeriod(instant);
@@ -32,7 +32,7 @@ public class TEAMSPeriodList implements Iterable<TEAMSPeriod> {
 	            if ( action.charAt(0) == 'A' ) {
 	                this._periodList.getLast().stopAt(instant);
 	            } else {
-	                System.out.println(p.get_name() + " --> erreur : action inconnue ["+action+"] ");
+	                System.out.println(nom + " --> erreur : action inconnue ["+action+"] ");
 	            }
 	    }
 	
