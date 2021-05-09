@@ -41,11 +41,13 @@ public class TEAMSProcessor {
         }
     }
 
-    public Collection<People> get_allpeople() {
-        return _allpeople;
-    }
+  	  public Collection<People> get_allpeople() {
+       		 return _allpeople;
+  	}
 
-    
+   	 public void set_allpeople(Collection<People> _allpeople) {
+		this._allpeople = _allpeople;
+	}
     
    
 
@@ -73,9 +75,7 @@ public class TEAMSProcessor {
 		this._endTime = _endTime;
 	}
 
-	public void set_allpeople(Collection<People> _allpeople) {
-		this._allpeople = _allpeople;
-	}
+	
     
     
     
